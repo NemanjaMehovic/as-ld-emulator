@@ -1,0 +1,18 @@
+symbol table
+name                section             val                 local               id
+myCode              myCode              0                   local               1                   
+tim_cfg             A                   FF10                local               2                   
+myStart             myCode              0                   global              3                   
+wait                myCode              A                   local               4                   
+myData              myData              0                   local               5                   
+myCounter           myData              0                   global              6                   
+
+.rel.myCode
+val                 type                id
+D                   R_X86_64_32         6                   
+19                  R_X86_64_32         1                   
+
+myCode
+A0 00 00 01 00 B0 00 04 10 FF A0 00 04 00 00 A0 10 00 05 00 74 01 52 F0 00 0A 00 00 
+myData
+00 00 

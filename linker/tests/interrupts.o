@@ -1,0 +1,29 @@
+symbol table
+name                section             val                 local               id
+ivt                 ivt                 0                   local               1                   
+isr                 isr                 0                   local               2                   
+term_out            A                   FF00                local               3                   
+term_in             A                   FF02                local               4                   
+asciiCode           A                   54                  local               5                   
+isr_reset           isr                 0                   local               6                   
+isr_timer           isr                 5                   local               7                   
+isr_terminal        isr                 16                  local               8                   
+myStart             E                   0                   global              9                   
+myCounter           E                   0                   global              A                   
+
+.rel.ivt
+val                 type                id
+0                   R_X86_64_32         2                   
+4                   R_X86_64_32         2                   
+6                   R_X86_64_32         2                   
+
+.rel.isr
+val                 type                id
+3                   R_X86_64_32         9                   
+29                  R_X86_64_PC32       A                   
+35                  R_X86_64_32         A                   
+
+ivt
+00 00 00 00 05 00 16 00 00 00 00 00 00 00 00 00 
+isr
+50 F0 00 00 00 B0 06 12 A0 00 00 54 00 B0 00 04 00 FF A0 06 42 20 B0 06 12 B0 16 12 A0 00 04 02 FF B0 00 04 00 FF A0 07 03 FE FF A0 10 00 01 00 70 01 B0 00 04 00 00 A0 16 42 A0 06 42 20 

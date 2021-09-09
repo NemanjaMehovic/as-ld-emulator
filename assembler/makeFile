@@ -1,0 +1,13 @@
+INCDIR = ./inc
+CC = g++
+CFLAG = -I$(INCDIR) -o assembler
+SRCDIR = ./src
+
+prog: parser lexer
+	$(CC) $(wildcard $(SRCDIR)/*.cpp) $(CFLAG)
+
+parser:
+	bison ./src/parser.y
+
+lexer:
+	flex ./src/lexer.l

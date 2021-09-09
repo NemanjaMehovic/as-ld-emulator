@@ -1,0 +1,7 @@
+INCDIR = ./inc
+CC = g++
+CFLAG = -I$(INCDIR) -o linker
+SRCDIR = ./src
+
+prog:
+	$(CC) $(wildcard $(SRCDIR)/*.cpp) $(CFLAG)
